@@ -2,11 +2,11 @@
   background: var(--color-primary);
   color: var(--color-white);
   padding: 12px;
-  border-radius: 0.5em;
+  border-radius: 10px;
 }
 
 .app-header__heading {
-  font-family: prompt;
+  font-family: prompt, sans-serif;
   font-weight: 800;
   font-size: 2.2em;
   line-height: 1;
