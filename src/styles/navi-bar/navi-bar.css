@@ -1,0 +1,11 @@
+.navi-bar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px;
+}
+
+.navi-bar__heading {
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+}
