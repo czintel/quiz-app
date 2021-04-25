@@ -38,3 +38,11 @@
 .lstn {
   list-style-type: none;
 }
+
+.lh1 {
+  line-height: 1;
+}
+
+.lh15 {
+  line-height: 1.5;
+}
