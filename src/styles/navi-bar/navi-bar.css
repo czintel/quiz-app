@@ -1,10 +1,19 @@
 .navi-bar {
   background: var(--color-primary);
   color: var(--color-white);
+  height: auto;
 }
 
-.navi-bar__heading {
-  font-weight: 400;
-  font-size: 1.2rem;
-  text-align: center;
+.navi-bar__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
 }
