@@ -2,47 +2,6 @@
   display: none !important;
 }
 
-.p0 {
-  padding: 0;
-}
-
-.p20 {
-  padding: 20px;
-}
-
 .m0 {
   margin: 0 !important;
-}
-
-.m20 {
-  margin: 20px;
-}
-
-.mxa {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.df {
-  display: flex;
-}
-
-.db {
-  display: block;
-}
-
-.jcsb {
-  justify-content: space-between;
-}
-
-.lstn {
-  list-style-type: none;
-}
-
-.lh1 {
-  line-height: 1;
-}
-
-.lh15 {
-  line-height: 1.5;
 }
