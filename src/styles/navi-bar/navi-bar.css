@@ -1,11 +1,49 @@
 .navi-bar {
   background: var(--color-primary);
   color: var(--color-white);
-  padding: 12px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
 }
 
-.navi-bar__heading {
-  font-weight: 400;
-  font-size: 1.2rem;
+.navi-bar__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  margin: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+  cursor: pointer;
   text-align: center;
+  transition: background 100ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-primary-soft);
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }
