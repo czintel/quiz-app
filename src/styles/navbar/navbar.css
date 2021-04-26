@@ -1,0 +1,30 @@
+.navbar {
+  background-color: var(--color-primary);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.navbar__list {
+  list-style-type: none;
+  padding: 0;
+  display: flexbox;
+}
+
+.button__navbar {
+  float: left;
+  width: 25%;
+  height: 64px;
+  border: none;
+  background-color: var(--color-primary-soft);
+  color: var(--color-white);
+}
+
+.button__navbar:active {
+  background-color: var(--color-primary);
+}
+
+.button__navbar:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
