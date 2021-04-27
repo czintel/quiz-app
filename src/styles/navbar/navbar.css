@@ -18,6 +18,9 @@
   border: none;
   background-color: var(--color-primary-soft);
   color: var(--color-white);
+  text-align: center;
+  padding-top: 22px;
+  text-decoration: none;
 }
 
 .button__navbar:active {

@@ -1,0 +1,66 @@
+.card--stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10%;
+}
+
+.card {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto 0;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.card__heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.card__question {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card__answer {
+  text-align: center;
+  padding: 30px 0;
+  font-style: italic;
+}
+
+.card__button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1rem;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.card__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card__list--item {
+  background-color: var(--color-gray);
+  padding: 5px;
+  margin: 2.5px;
+  border-radius: 5px;
+}
+
+.card__bookmark {
+  position: absolute;
+}
+
+.card__bookmark--selected {
+  position: absolute;
+}
