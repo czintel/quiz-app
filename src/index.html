@@ -1,72 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script defer type="module" src="./index.js"></script>
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-header__heading">Quiz App</h1>
+      <h1 class="app-header__heading">Quiz-App</h1>
     </header>
-    <main>
-      <section class="quiz-card">
-        <h2 class="quiz-card__heading">Question #1</h2>
-
-        <p class="quiz-card__question lh15">
-          Was ist grün, knackig und steht vor deiner Tür?
-        </p>
-
-        <button class="quiz-card__button db mxa">Show answer</button>
-
-        <p class="quiz-card__answer lh15">Ein Klopfsalat.</p>
-
-        <ul class="quiz-card__list df jcsb lstn p0">
-          <li class="quiz-card__list__hint">gemüse</li>
-          <li class="quiz-card__list__hint">grün</li>
-          <li class="quiz-card__list__hint">witz</li>
-          <li class="quiz-card__list__hint">höflich</li>
-        </ul>
-
-        <svg
-          class="quiz-card__bookmark"
-          viewbox="0 0 72 115.64"
-          xml:space="preserve"
-        >
-          <path
-            d="M58.47,114.49l-18.78-10.43c-2.3-1.28-5.09-1.28-7.38,0l-18.78,10.43C7.46,117.86,0,113.47,0,106.53V9.83
-      C0,4.4,4.4,0,9.83,0h52.33C67.6,0,72,4.4,72,9.83v96.69C72,113.47,64.54,117.86,58.47,114.49z"
-          />
-        </svg>
+    <main class="main__landing-page">
+      <section class="card-stack">
+        <section class="card">
+          <h2 class="card__heading">Frage #1</h2>
+          <p class="card__question">
+            Was ist grün, frisch und steht vor deiner Tür?
+          </p>
+          <button class="card__button">Zeige Lösung</button>
+          <p class="card__answer">Ein Klopfsalat</p>
+          <ul class="card__list">
+            <li class="card__list--item">unerwartet</li>
+            <li class="card__list--item">gemüse</li>
+            <li class="card__list--item">höflich</li>
+            <li class="card__list--item">gesund</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2 class="card__heading">Frage #2</h2>
+          <p class="card__question">
+            Was ist grün, frisch und steht vor deiner Tür?
+          </p>
+          <button class="card__button">Zeige Lösung</button>
+          <p class="card__answer">Ein Klopfsalat</p>
+          <ul class="card__list">
+            <li class="card__list--item">unerwartet</li>
+            <li class="card__list--item">gemüse</li>
+            <li class="card__list--item">höflich</li>
+            <li class="card__list--item">gesund</li>
+          </ul>
+        </section>
       </section>
     </main>
-    <footer>
-      <nav class="navi-bar">
-        <ul class="navi-bar__list">
-          <li>
-            <button class="navi-bar__list--item">
-              <a href="../index.html">🏠</a>
-            </button>
-          </li>
-          <li>
-            <button class="navi-bar__list--item">
-              <a href="../bookmarks.html">📖</a>
-            </button>
-          </li>
-          <li>
-            <button class="navi-bar__list--item">
-              <a href="../create.html">✏️</a>
-            </button>
-          </li>
-          <li>
-            <button class="navi-bar__list--item">
-              <a href="../profile.html">👤</a>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </footer>
   </body>
 </html>

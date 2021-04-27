@@ -1,5 +1,44 @@
 <main class="main__create-form">
   <header class="create-form">
-    <h1 class="create-form__heading">Quiz-Karte erstellen</h1>
+    <h1 class="main__create-form__heading">Quiz-Karte erstellen</h1>
   </header>
+  <section class="create-form__form">
+    <section class="create-form__form__question">
+      <label for="frage"
+        ><h2 class="create-form__form__heading">Deine Frage:</h2>
+      </label>
+      <input
+        class="create-form__form__form"
+        type="text"
+        name="frage"
+        id="frage"
+        required
+      />
+    </section>
+    <section class="create-form__form__answer">
+      <label for="antwort"
+        ><h2 class="create-form__form__heading">Deine Antwort:</h2>
+      </label>
+      <input
+        class="create-form__form__form"
+        type="text"
+        name="antwort"
+        id="antwort"
+        required
+      />
+    </section>
+    <section class="create-form__form__tags">
+      <label for="tags"
+        ><h2 class="create-form__form__heading">Tags:</h2>
+      </label>
+      <input
+        class="create-form__form__form"
+        type="text"
+        name="tags"
+        id="tags"
+        required
+      />
+    </section>
+    <button class="card__button">Speichern</button>
+  </section>
 </main>
