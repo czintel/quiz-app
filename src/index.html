@@ -12,14 +12,20 @@
     <header class="app-header">
       <h1 class="app-header__heading">Quiz-App</h1>
     </header>
-    <main class="main__landing-page">
+    <section class="navbar">
+      <button class="navbar__button" id="id-home">Home</button>
+      <button class="navbar__button" id="id-bookmark">Karten</button>
+      <button class="navbar__button" id="id-create">Neu</button>
+      <button class="navbar__button" id="id-profile">Profil</button>
+    </section>
+    <main class="main__home main-centered">
       <section class="card-stack">
         <section class="card">
           <h2 class="card__heading">Frage #1</h2>
           <p class="card__question">
             Was ist grün, frisch und steht vor deiner Tür?
           </p>
-          <button class="card__button">Zeige Lösung</button>
+          <button class="card__button">Lösung</button>
           <p class="card__answer">Ein Klopfsalat</p>
           <ul class="card__list">
             <li class="card__list--item">unerwartet</li>
@@ -33,7 +39,7 @@
           <p class="card__question">
             Was ist grün, frisch und steht vor deiner Tür?
           </p>
-          <button class="card__button">Zeige Lösung</button>
+          <button class="card__button">Lösung</button>
           <p class="card__answer">Ein Klopfsalat</p>
           <ul class="card__list">
             <li class="card__list--item">unerwartet</li>
@@ -42,6 +48,50 @@
             <li class="card__list--item">gesund</li>
           </ul>
         </section>
+      </section>
+    </main>
+    <main class="main__create">
+      <header class="create">
+        <h1 class="main__create__heading">Neue Karte</h1>
+      </header>
+      <section class="create__form">
+        <section class="create__form__question">
+          <label for="frage"
+            ><h2 class="create__form__heading">Deine Frage:</h2>
+          </label>
+          <input
+            class="create__form__form"
+            type="text"
+            name="frage"
+            id="frage"
+            required
+          />
+        </section>
+        <section class="create__form__answer">
+          <label for="antwort"
+            ><h2 class="create__form__heading">Deine Antwort:</h2>
+          </label>
+          <input
+            class="create__form__form"
+            type="text"
+            name="antwort"
+            id="antwort"
+            required
+          />
+        </section>
+        <section class="create__form__tags">
+          <label for="tags"
+            ><h2 class="create__form__heading">Tags:</h2>
+          </label>
+          <input
+            class="create__form__form"
+            type="text"
+            name="tags"
+            id="tags"
+            required
+          />
+        </section>
+        <button class="card__button">Speichern</button>
       </section>
     </main>
   </body>

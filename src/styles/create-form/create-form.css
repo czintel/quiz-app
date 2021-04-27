@@ -1,10 +1,10 @@
-.create-form {
+.create {
   background-color: var(--color-primary);
   width: 100%;
   height: auto;
 }
 
-.create-form__form {
+.create__form {
   background-color: var(--color-black);
   color: var(--color-white);
   width: 90%;
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.main__create-form__heading {
+.main__create__heading {
   text-align: center;
   color: var(--color-white);
   font-weight: 500;
@@ -25,13 +25,13 @@
   padding-top: 20px;
 }
 
-.create-form__form__heading {
+.create__form__heading {
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 15px;
 }
 
-.create-form__form__form {
+.create__form__form {
   font-family: inherit;
   width: 100%;
   height: fit-content;
