@@ -1,19 +1,26 @@
-.card--stack {
+.card-stack {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10%;
+  flex-wrap: wrap;
+  grid-template-columns: 1 fr 1fr;
+  grid-row: 1fr 1fr;
+  grid-gap: 30px;
 }
 
 .card {
   background-color: var(--color-black);
   color: var(--color-white);
-  width: 90%;
+  width: auto;
+  min-width: 315px;
   max-width: 400px;
-  margin: 5% auto 0;
+  margin: 0 30px;
   padding: 30px;
   border-radius: 15px;
   text-align: center;
   position: relative;
+}
+
+.placeholder {
+  margin-top: 94px;
 }
 
 .card__heading {

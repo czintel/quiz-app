@@ -12,6 +12,7 @@
   background-color: var(--color-primary);
   font-family: inherit;
   font-weight: 700;
+  line-height: 1.1;
   color: var(--color-white);
   display: block;
   margin: 0;

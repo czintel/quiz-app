@@ -1,12 +1,14 @@
 .app-header {
   background-color: var(--color-primary);
   width: 100%;
-  height: auto;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .app-header__heading {
   text-align: center;
   color: var(--color-white);
-  height: 64px;
   padding-top: 15px;
 }
