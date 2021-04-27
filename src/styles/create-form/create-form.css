@@ -1,0 +1,14 @@
+.create-form {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: auto;
+}
+
+.create-form__heading {
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 1.5em;
+  height: 64px;
+  padding-top: 20px;
+}
