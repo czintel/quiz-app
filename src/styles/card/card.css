@@ -40,7 +40,7 @@
   font-size: 1rem;
   border: 0;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .card__list {
@@ -54,6 +54,7 @@
   background-color: var(--color-gray);
   padding: 5px;
   margin: 2.5px;
+  border-radius: 5px;
 }
 
 .card__bookmark {
