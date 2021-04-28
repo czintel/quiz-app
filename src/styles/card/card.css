@@ -19,8 +19,26 @@
   position: relative;
 }
 
-.card:first-of-type {
-  margin-top: 94px;
+.card:last-of-type {
+  margin-bottom: 94px;
+}
+
+.card__bookmark {
+  fill: var(--color-primary-soft);
+  height: 50px;
+  width: 40px;
+  position: absolute;
+  top: -5px;
+  right: 5%;
+}
+
+.card__bookmark--selected {
+  fill: var(--color-primary);
+  height: 50px;
+  width: 40px;
+  position: absolute;
+  top: -5px;
+  right: 5%;
 }
 
 .card__heading {
@@ -64,12 +82,4 @@
   padding: 5px;
   margin: 2.5px;
   border-radius: 5px;
-}
-
-.card__bookmark {
-  position: absolute;
-}
-
-.card__bookmark--selected {
-  position: absolute;
 }

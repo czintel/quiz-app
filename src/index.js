@@ -8,6 +8,27 @@ buttonHide1.addEventListener('click', () => {
   buttonHide1.classList.toggle('mb30')
 })
 
+const answerHide2 = document.querySelector('.js-answer2')
+const buttonHide2 = document.querySelector('.js-button-hide2')
+
+buttonHide2.addEventListener('click', () => {
+  answerHide2.classList.toggle('hidden')
+  buttonHide2.classList.toggle('mb30')
+})
+
+const activeBookmark = document.querySelector('.js-bookmark-active1')
+const idleBookmark = document.querySelector('.js-bookmark-idle1')
+
+activeBookmark.addEventListener('click', () => {
+  activeBookmark.classList.add('hidden')
+  idleBookmark.classList.remove('hidden')
+})
+
+idleBookmark.addEventListener('click', () => {
+  activeBookmark.classList.remove('hidden')
+  idleBookmark.classList.add('hidden')
+})
+
 const mainHome = document.querySelector('.js-main-home')
 const mainBookmark = document.querySelector('.js-main-bookmark')
 const mainCreate = document.querySelector('.js-main-create')
