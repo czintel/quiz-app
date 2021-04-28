@@ -9,6 +9,7 @@
 
 .app-header__heading {
   text-align: center;
+  font-size: 2em;
   color: var(--color-white);
   padding-top: 15px;
 }

@@ -9,16 +9,16 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <header class="app-header">
+    <section class="navbar">
+      <button class="navbar__button js-button-home">Home</button>
+      <button class="navbar__button js-button-bookmark">Meine Karten</button>
+      <button class="navbar__button js-button-create">Neue Karte</button>
+      <button class="navbar__button js-button-profile">Profil</button>
+    </section>
+    <header class="app-header js-header-home">
       <h1 class="app-header__heading">Quiz-App</h1>
     </header>
-    <section class="navbar">
-      <button class="navbar__button" id="id-home">Home</button>
-      <button class="navbar__button" id="id-bookmark">Meine Karten</button>
-      <button class="navbar__button" id="id-create">Neue Karte</button>
-      <button class="navbar__button" id="id-profile">Profil</button>
-    </section>
-    <main class="main__home min80">
+    <main class="main__home js-main-home">
       <section class="placeholder"></section>
       <section class="card-stack">
         <section class="card">
@@ -26,8 +26,8 @@
           <p class="card__question">
             Was ist grün, frisch und steht vor deiner Tür?
           </p>
-          <button class="card__button">Lösung</button>
-          <p class="card__answer">Ein Klopfsalat</p>
+          <button class="card__button js-button-hide1 mb30">Lösung</button>
+          <p class="card__answer1 js-answer1 mbt30 hidden">Ein Klopfsalat</p>
           <ul class="card__list">
             <li class="card__list--item">grün</li>
             <li class="card__list--item">gemüse</li>
@@ -49,10 +49,14 @@
         </section>
       </section>
     </main>
-    <header class="create">
-      <h1 class="main__create__heading">Neue Karte</h1>
+    <header class="app-header js-header-bookmark hidden">
+      <h1 class="app-header__heading">Meine Karten</h1>
     </header>
-    <main class="main__create">
+    <main class="main__bookmark js-main-bookmark hidden"></main>
+    <header class="app-header js-header-create hidden">
+      <h1 class="app-header__heading">Neue Karte</h1>
+    </header>
+    <main class="main__create js-main-create hidden">
       <section class="placeholder"></section>
       <section class="create__form">
         <section class="create__form__question">
@@ -94,5 +98,10 @@
         <button class="card__button">Speichern</button>
       </section>
     </main>
+    <header class="app-header js-header-profile hidden">
+      <h1 class="app-header__heading">Profil</h1>
+    </header>
+    <main class="main__profile js-main-profile hidden"></main>
+    <footer class="app-footer"></footer>
   </body>
 </html>
