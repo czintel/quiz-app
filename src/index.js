@@ -1,15 +1,25 @@
-const answerHide = document.querySelector('.js-answer')
-const buttonHide = document.querySelector('.js-button-hide')
+import getElement from './utils/getElement.'
+
+const answer = getElement('.js-answer')
+const buttonHide = getElement('.js-button-hide')
+
+const toggleBookmark = getElement('.js-toggle-bookmark')
+const toggleBookmarkSelected = getElement('.js-toggle-bookmark-selected')
+
+const pageHome = getElement('.js-page-home')
+const pageBookmark = getElement('.js-page-bookmark')
+const pageCreate = getElement('.js-page-create')
+const pageProfile = getElement('.js-page-profile')
+
+const buttonHome = getElement('.js-button-home')
+const buttonBookmark = getElement('.js-button-bookmark')
+const buttonCreate = getElement('.js-button-create')
+const buttonProfile = getElement('.js-button-profile')
 
 buttonHide.addEventListener('click', () => {
-  answerHide.classList.toggle('hidden')
+  answer.classList.toggle('hidden')
   buttonHide.classList.toggle('mb30')
 })
-
-const toggleBookmark = document.querySelector('.js-toggle-bookmark')
-const toggleBookmarkSelected = document.querySelector(
-  '.js-toggle-bookmark-selected'
-)
 
 toggleBookmark.addEventListener('click', () => {
   toggleBookmark.classList.toggle('hidden')
@@ -21,39 +31,51 @@ toggleBookmarkSelected.addEventListener('click', () => {
   toggleBookmarkSelected.classList.toggle('hidden')
 })
 
-const mainHome = document.querySelector('.js-page-home')
-const mainBookmark = document.querySelector('.js-page-bookmark')
-const mainCreate = document.querySelector('.js-page-create')
-const mainProfile = document.querySelector('.js-page-profile')
-const buttonHome = document.querySelector('.js-button-home')
-const buttonBookmark = document.querySelector('.js-button-bookmark')
-const buttonCreate = document.querySelector('.js-button-create')
-const buttonProfile = document.querySelector('.js-button-profile')
+buttonHome.addEventListener('click', navigateToHome)
+buttonBookmark.addEventListener('click', navigateToBookmark)
+buttonCreate.addEventListener('click', navigateToCreate)
+buttonProfile.addEventListener('click', navigateToProfile)
 
-buttonHome.addEventListener('click', () => {
-  mainHome.classList.remove('hidden')
-  mainBookmark.classList.add('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.add('hidden')
-})
+function navigateToHome() {
+  changePage(pageHome)
+  selectButton(buttonHome)
+}
 
-buttonBookmark.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmark.classList.remove('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.add('hidden')
-})
+function navigateToBookmark() {
+  changePage(pageBookmark)
+  selectButton(buttonBookmark)
+}
 
-buttonCreate.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmark.classList.add('hidden')
-  mainCreate.classList.remove('hidden')
-  mainProfile.classList.add('hidden')
-})
+function navigateToCreate() {
+  changePage(pageCreate)
+  selectButton(buttonCreate)
+}
 
-buttonProfile.addEventListener('click', () => {
-  mainHome.classList.add('hidden')
-  mainBookmark.classList.add('hidden')
-  mainCreate.classList.add('hidden')
-  mainProfile.classList.remove('hidden')
-})
+function navigateToProfile() {
+  changePage(pageProfile)
+  selectButton(buttonProfile)
+}
+
+function changePage(page) {
+  hideAllPages()
+  page.classList.remove('hidden')
+}
+
+function selectButton(button) {
+  deactivateButtons()
+  button.classList.add('active')
+}
+
+function deactivateButtons() {
+  buttonHome.classList.remove('active')
+  buttonBookmark.classList.remove('active')
+  buttonCreate.classList.remove('active')
+  buttonProfile.classList.remove('active')
+}
+
+function hideAllPages() {
+  pageHome.classList.add('hidden')
+  pageBookmark.classList.add('hidden')
+  pageCreate.classList.add('hidden')
+  pageProfile.classList.add('hidden')
+}
