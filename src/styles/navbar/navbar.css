@@ -23,6 +23,7 @@
 
 .navbar__button:hover {
   background-color: var(--color-primary-soft);
+  color: var(--color-white);
 }
 
 .navbar__button--active {

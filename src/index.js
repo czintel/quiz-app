@@ -1,10 +1,10 @@
-import getElement from './utils/getElement.'
+import getElement from './utils/getElement'
 
 const answer = getElement('.js-answer')
 const buttonHide = getElement('.js-button-hide')
 
-const toggleBookmark = getElement('.js-toggle-bookmark')
-const toggleBookmarkSelected = getElement('.js-toggle-bookmark-selected')
+const bookmark = getElement('.js-toggle-bookmark')
+const bookmarkSelected = getElement('.js-toggle-bookmark-selected')
 
 const pageHome = getElement('.js-page-home')
 const pageBookmark = getElement('.js-page-bookmark')
@@ -21,14 +21,12 @@ buttonHide.addEventListener('click', () => {
   buttonHide.classList.toggle('mb30')
 })
 
-toggleBookmark.addEventListener('click', () => {
-  toggleBookmark.classList.toggle('hidden')
-  toggleBookmarkSelected.classList.toggle('hidden')
+bookmark.addEventListener('click', () => {
+  toggleBookmark(bookmark, bookmarkSelected)
 })
 
-toggleBookmarkSelected.addEventListener('click', () => {
-  toggleBookmark.classList.toggle('hidden')
-  toggleBookmarkSelected.classList.toggle('hidden')
+bookmarkSelected.addEventListener('click', () => {
+  toggleBookmark(bookmark, bookmarkSelected)
 })
 
 buttonHome.addEventListener('click', navigateToHome)
@@ -63,14 +61,14 @@ function changePage(page) {
 
 function selectButton(button) {
   deactivateButtons()
-  button.classList.add('active')
+  button.classList.add('navbar__button--active')
 }
 
 function deactivateButtons() {
-  buttonHome.classList.remove('active')
-  buttonBookmark.classList.remove('active')
-  buttonCreate.classList.remove('active')
-  buttonProfile.classList.remove('active')
+  buttonHome.classList.remove('navbar__button--active')
+  buttonBookmark.classList.remove('navbar__button--active')
+  buttonCreate.classList.remove('navbar__button--active')
+  buttonProfile.classList.remove('navbar__button--active')
 }
 
 function hideAllPages() {
@@ -78,4 +76,9 @@ function hideAllPages() {
   pageBookmark.classList.add('hidden')
   pageCreate.classList.add('hidden')
   pageProfile.classList.add('hidden')
+}
+
+function toggleBookmark(state1, state2) {
+  state1.classList.toggle('hidden')
+  state2.classList.toggle('hidden')
 }
