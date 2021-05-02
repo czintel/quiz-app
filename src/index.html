@@ -17,14 +17,13 @@
     </section>
 
     <section class="page__home js-page-home">
-      <header class="app-header js-header-home">
+      <header class="app-header">
         <h1 class="app-header__heading">Quiz-App</h1>
       </header>
-      <section class="placeholder"></section>
       <section class="card-stack">
         <section class="card">
           <svg
-            class="card__bookmark js-bookmark-idle1"
+            class="card__bookmark js-toggle-bookmark"
             xmlns="http://www.w3.org/2000/svg"
             viewbox="0 0 30 40"
           >
@@ -33,7 +32,7 @@
             />
           </svg>
           <svg
-            class="card__bookmark--selected js-bookmark-active1 hidden"
+            class="card__bookmark--selected hidden js-toggle-bookmark-selected"
             xmlns="http://www.w3.org/2000/svg"
             viewbox="0 0 30 40"
           >
@@ -45,8 +44,8 @@
           <p class="card__question">
             Was ist grün, frisch und steht vor deiner Tür?
           </p>
-          <button class="card__button js-button-hide1 mb30">Lösung</button>
-          <p class="card__answer js-answer1 mb15 hidden">Ein Klopfsalat</p>
+          <button class="card__button js-button-hide mb30">Lösung</button>
+          <p class="card__answer js-answer mb15 hidden">Ein Klopfsalat</p>
           <ul class="card__list">
             <li class="card__list--item">grün</li>
             <li class="card__list--item">gemüse</li>
@@ -54,45 +53,17 @@
             <li class="card__list--item">gesund</li>
           </ul>
         </section>
-        <section class="card">
-          <svg
-            class="card__bookmark"
-            xmlns="http://www.w3.org/2000/svg"
-            viewbox="0 0 30 40"
-          >
-            <path
-              d="M24.3 39.5l-7.6-4.4c-1-0.6-2.3-0.6-3.3 0l-7.6 4.4c-1.7 1-4 0.6-5.1-0.9C0.2 38.1 0 37.5 0 36.8V2.2C0 1 1.2 0 2.6 0h24.8C28.8 0 30 1 30 2.2c0 0 0 0 0 0v34.6c0 1.7-1.7 3.2-3.7 3.2C25.6 40 24.9 39.8 24.3 39.5z"
-            />
-          </svg>
-          <svg
-            class="card__bookmark--selected hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            viewbox="0 0 30 40"
-          >
-            <path
-              d="M24.3 39.5l-7.6-4.4c-1-0.6-2.3-0.6-3.3 0l-7.6 4.4c-1.7 1-4 0.6-5.1-0.9C0.2 38.1 0 37.5 0 36.8V2.2C0 1 1.2 0 2.6 0h24.8C28.8 0 30 1 30 2.2c0 0 0 0 0 0v34.6c0 1.7-1.7 3.2-3.7 3.2C25.6 40 24.9 39.8 24.3 39.5z"
-            />
-          </svg>
-          <h2 class="card__heading">Frage #2</h2>
-          <p class="card__question">Was ist gelb und schießt?</p>
-          <button class="card__button js-button-hide2 mb30">Lösung</button>
-          <p class="card__answer js-answer2 mb15 hidden">Eine Banone</p>
-          <ul class="card__list">
-            <li class="card__list--item">gelb</li>
-            <li class="card__list--item">obst</li>
-            <li class="card__list--item">mit schale</li>
-            <li class="card__list--item">krumm</li>
-          </ul>
-        </section>
       </section>
     </section>
+
     <section class="page__bookmark js-page-bookmark hidden">
-      <header class="app-header js-header-bookmark hidden">
+      <header class="app-header">
         <h1 class="app-header__heading">Meine Karten</h1>
       </header>
     </section>
+
     <section class="page__create js-page-create hidden">
-      <header class="app-header js-header-create hidden">
+      <header class="app-header">
         <h1 class="app-header__heading">Neue Karte</h1>
       </header>
       <section class="placeholder"></section>
@@ -137,10 +108,11 @@
       </section>
     </section>
     <section class="page__profile js-page-profile hidden">
-      <header class="app-header js-header-profile hidden">
+      <header class="app-header">
         <h1 class="app-header__heading">Profil</h1>
       </header>
     </section>
+
     <footer class="app-footer"></footer>
   </body>
 </html>

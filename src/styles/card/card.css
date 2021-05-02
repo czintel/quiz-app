@@ -1,8 +1,6 @@
 .card-stack {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: 1 fr 1fr;
-  grid-row: 1fr 1fr;
   grid-gap: 30px;
 }
 
