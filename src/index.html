@@ -9,17 +9,10 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <section class="navbar">
-      <button class="navbar__button js-button-home">Home</button>
-      <button class="navbar__button js-button-bookmark">Meine Karten</button>
-      <button class="navbar__button js-button-create">Neue Karte</button>
-      <button class="navbar__button js-button-profile">Profil</button>
-    </section>
-
-    <section class="page__home js-page-home">
-      <header class="app-header">
-        <h1 class="app-header__heading">Quiz-App</h1>
-      </header>
+    <header class="app-header">
+      <h1 class="app-header__heading" data-header>Quiz-App</h1>
+    </header>
+    <main class="page__home js-page-home" data-page="home">
       <section class="card-stack">
         <section class="card">
           <svg
@@ -54,18 +47,14 @@
           </ul>
         </section>
       </section>
-    </section>
+    </main>
 
-    <section class="page__bookmark js-page-bookmark hidden">
-      <header class="app-header">
-        <h1 class="app-header__heading">Meine Karten</h1>
-      </header>
-    </section>
+    <main
+      class="page__bookmark js-page-bookmark hidden"
+      data-page="bookmarks"
+    ></main>
 
-    <section class="page__create js-page-create hidden">
-      <header class="app-header">
-        <h1 class="app-header__heading">Neue Karte</h1>
-      </header>
+    <main class="page__create js-page-create hidden" data-page="create">
       <section class="create__form">
         <section class="create__form__question">
           <label for="frage"
@@ -105,12 +94,9 @@
         </section>
         <button class="card__button">Speichern</button>
       </section>
-    </section>
+    </main>
 
-    <section class="page__profile js-page-profile hidden">
-      <header class="app-header">
-        <h1 class="app-header__heading">Profil</h1>
-      </header>
+    <main class="page__profile js-page-profile hidden" data-page="profile">
       <section>
         <img
           src="./assets/images/ProfilePhoto.jpeg"
@@ -119,8 +105,37 @@
         />
         <p class="profile__photo__name">Christian Zintel</p>
       </section>
+    </main>
+    <section class="navbar">
+      <button
+        class="navbar__button"
+        data-nav="home"
+        data-header-text="Quiz-App"
+      >
+        Home
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="bookmarks"
+        data-header-text="Meine Karten"
+      >
+        Meine Karten
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="create"
+        data-header-text="Neue Karte"
+      >
+        Neue Karte
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="profile"
+        data-header-text="Profil"
+      >
+        Profil
+      </button>
     </section>
-
     <footer class="app-footer"></footer>
   </body>
 </html>
