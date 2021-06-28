@@ -10,24 +10,35 @@
   </head>
   <body>
     <header class="app-header">
-      <h1 class="app-header__heading">Quiz-App</h1>
+      <h1 class="app-header__heading" data-header>Quiz-App</h1>
     </header>
-    <section class="navbar">
-      <button class="navbar__button" id="id-home">Home</button>
-      <button class="navbar__button" id="id-bookmark">Meine Karten</button>
-      <button class="navbar__button" id="id-create">Neue Karte</button>
-      <button class="navbar__button" id="id-profile">Profil</button>
-    </section>
-    <main class="main__home min80">
-      <section class="placeholder"></section>
+    <main class="page__home js-page-home" data-page="home">
       <section class="card-stack">
         <section class="card">
+          <svg
+            class="card__bookmark js-toggle-bookmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 30 40"
+          >
+            <path
+              d="M24.3 39.5l-7.6-4.4c-1-0.6-2.3-0.6-3.3 0l-7.6 4.4c-1.7 1-4 0.6-5.1-0.9C0.2 38.1 0 37.5 0 36.8V2.2C0 1 1.2 0 2.6 0h24.8C28.8 0 30 1 30 2.2c0 0 0 0 0 0v34.6c0 1.7-1.7 3.2-3.7 3.2C25.6 40 24.9 39.8 24.3 39.5z"
+            />
+          </svg>
+          <svg
+            class="card__bookmark--selected hidden js-toggle-bookmark-selected"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 30 40"
+          >
+            <path
+              d="M24.3 39.5l-7.6-4.4c-1-0.6-2.3-0.6-3.3 0l-7.6 4.4c-1.7 1-4 0.6-5.1-0.9C0.2 38.1 0 37.5 0 36.8V2.2C0 1 1.2 0 2.6 0h24.8C28.8 0 30 1 30 2.2c0 0 0 0 0 0v34.6c0 1.7-1.7 3.2-3.7 3.2C25.6 40 24.9 39.8 24.3 39.5z"
+            />
+          </svg>
           <h2 class="card__heading">Frage #1</h2>
           <p class="card__question">
             Was ist grün, frisch und steht vor deiner Tür?
           </p>
-          <button class="card__button">Lösung</button>
-          <p class="card__answer">Ein Klopfsalat</p>
+          <button class="card__button js-button-hide mb30">Lösung</button>
+          <p class="card__answer js-answer mb15 hidden">Ein Klopfsalat</p>
           <ul class="card__list">
             <li class="card__list--item">grün</li>
             <li class="card__list--item">gemüse</li>
@@ -35,25 +46,15 @@
             <li class="card__list--item">gesund</li>
           </ul>
         </section>
-        <section class="card">
-          <h2 class="card__heading">Frage #2</h2>
-          <p class="card__question">Was ist gelb und schießt?</p>
-          <button class="card__button">Lösung</button>
-          <p class="card__answer">Eine Banone</p>
-          <ul class="card__list">
-            <li class="card__list--item">gelb</li>
-            <li class="card__list--item">obst</li>
-            <li class="card__list--item">mit schale</li>
-            <li class="card__list--item">krumm</li>
-          </ul>
-        </section>
       </section>
     </main>
-    <header class="create">
-      <h1 class="main__create__heading">Neue Karte</h1>
-    </header>
-    <main class="main__create">
-      <section class="placeholder"></section>
+
+    <main
+      class="page__bookmark js-page-bookmark hidden"
+      data-page="bookmarks"
+    ></main>
+
+    <main class="page__create js-page-create hidden" data-page="create">
       <section class="create__form">
         <section class="create__form__question">
           <label for="frage"
@@ -94,5 +95,47 @@
         <button class="card__button">Speichern</button>
       </section>
     </main>
+
+    <main class="page__profile js-page-profile hidden" data-page="profile">
+      <section>
+        <img
+          src="./assets/images/ProfilePhoto.jpeg"
+          alt=""
+          class="profile__photo"
+        />
+        <p class="profile__photo__name">Christian Zintel</p>
+      </section>
+    </main>
+    <section class="navbar">
+      <button
+        class="navbar__button"
+        data-nav="home"
+        data-header-text="Quiz-App"
+      >
+        Home
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="bookmarks"
+        data-header-text="Meine Karten"
+      >
+        Meine Karten
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="create"
+        data-header-text="Neue Karte"
+      >
+        Neue Karte
+      </button>
+      <button
+        class="navbar__button"
+        data-nav="profile"
+        data-header-text="Profil"
+      >
+        Profil
+      </button>
+    </section>
+    <footer class="app-footer"></footer>
   </body>
 </html>

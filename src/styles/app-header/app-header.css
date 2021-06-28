@@ -2,13 +2,15 @@
   background-color: var(--color-primary);
   width: 100%;
   height: 64px;
-  position: fixed;
+  position: sticky;
+  margin-bottom: 30px;
   top: 0;
   z-index: 10;
 }
 
 .app-header__heading {
   text-align: center;
+  font-size: 2em;
   color: var(--color-white);
   padding-top: 15px;
 }
